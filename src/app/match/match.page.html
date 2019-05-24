@@ -1,0 +1,48 @@
+
+   
+<ion-content color="light">
+
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="auto">
+
+                <ion-slides #mySlider>  
+                  <ion-slide *ngFor="let item of imagens">
+                    <ion-card class="ion-card" mode="ios">   
+                      <img src="{{ item.img }}"/>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+                    
+                        <ion-row text-center>
+                          <ion-col> 
+                            <ion-button id="Sim"
+                                        shape="round"
+                                        fill="outline" 
+                                        size="default" 
+                                        color="success"
+                                        (click)="slideNext()">
+                              <ion-ripple-effect></ion-ripple-effect>
+                              <ion-icon name="heart-empty" size="large"></ion-icon>
+                            </ion-button>
+                          </ion-col>  
+      
+                          <ion-col>
+                            <ion-button id="Nao"
+                                        shape="round" 
+                                        fill="outline" 
+                                        size="default" 
+                                        color="danger"
+                                        (click)="slideNext()">
+                              <ion-ripple-effect></ion-ripple-effect>
+                              <ion-icon name="close-circle-outline" size="large"></ion-icon>
+                            </ion-button>
+                          </ion-col>
+                        </ion-row>
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+</ion-content>
